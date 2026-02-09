@@ -2,25 +2,25 @@ class Nr < Formula
   desc "TUI-based npm script runner with fuzzy search"
   homepage "https://github.com/juicyjusung/nr"
   license "MIT"
-  version "0.2.0"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/juicyjusung/nr/releases/download/v0.2.0/nr-v0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "aa188b63a70be1b6b8daf188ccd1361a22e6ea41bd0d86861ff5378a4aac3bb9"
+      url "https://github.com/juicyjusung/nr/releases/download/v0.2.2/nr-v0.2.2-aarch64-apple-darwin.tar.gz"
+      sha256 "bf631a957a291b01cd6fa1a7774cc23f8f08b5512a25dd6ce0140c0fee9562f6"
     else
-      url "https://github.com/juicyjusung/nr/releases/download/v0.2.0/nr-v0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "9f296a4c9af78b9cb2e89a68c9d4ab242a330935c7ae5cf5b9aac9341e9bf77d"
+      url "https://github.com/juicyjusung/nr/releases/download/v0.2.2/nr-v0.2.2-x86_64-apple-darwin.tar.gz"
+      sha256 "2441e243615050cd96b348aedb2577b1da4c62b5d3e05e4940dbea4ac51967fb"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/juicyjusung/nr/releases/download/v0.2.0/nr-v0.2.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "04b0373b5799207525aed89359ef80c2dbeed44dcb9ac1bd896ef8ac54923a76"
+      url "https://github.com/juicyjusung/nr/releases/download/v0.2.2/nr-v0.2.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "74dfa440d2a0c3a4233608ff377ae12a63047ba48b182e3a844a7ba678c7c1b3"
     else
-      url "https://github.com/juicyjusung/nr/releases/download/v0.2.0/nr-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "37ce8b907e582bbb519af0a046ec2f59a9e7d440d74f43296df19c22912942c5"
+      url "https://github.com/juicyjusung/nr/releases/download/v0.2.2/nr-v0.2.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1f0cc001dc2b403e9c5c57f3d8947bc34ea8b349198d653ff5dee583c55085ca"
     end
   end
 
