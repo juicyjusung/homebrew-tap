@@ -2,30 +2,19 @@ class Qgh < Formula
   desc "Local-first GitHub Issues retrieval CLI"
   homepage "https://github.com/juicyjusung/qgh"
   version "0.1.0"
-
-  def self.github_release_headers
-    headers = ["Accept: application/octet-stream"]
-    token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
-    headers << "Authorization: Bearer #{token}" unless token.to_s.empty?
-    headers
-  end
-
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/juicyjusung/qgh/releases/assets/468710082",
-          headers: github_release_headers
-      sha256 "dc9e66e8abd04b3175519236cb191c46c4730cb11a4845e83af88464d917e017"
+      url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-aarch64-apple-darwin.tar.xz"
+      sha256 "fdeb1168a1335a9acac322d115c99ec3724ff61b8a641ba294f695dd3a9a2d29"
     end
     if Hardware::CPU.intel?
-      url "https://api.github.com/repos/juicyjusung/qgh/releases/assets/468710083",
-          headers: github_release_headers
-      sha256 "c9c70761ae8bf19ea21f40f53f675ab81a40822f4f75fc2253e1e1e79e128649"
+      url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-x86_64-apple-darwin.tar.xz"
+      sha256 "3a1b90b6c60087a3fb8ace6803916e65742d45791a103c81dfd2a3fb81bfd987"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://api.github.com/repos/juicyjusung/qgh/releases/assets/468710088",
-        headers: github_release_headers
-    sha256 "a7427bf7e66a58237bcd330e257a012a2c953d24ce5d269e9de10dd2aec3b3e5"
+    url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "48668496f6e4144e6de23db304ddfd47b19ae94d8b5de8c03c2753ba85901a5d"
   end
 
   BINARY_ALIASES = {
