@@ -1,25 +1,18 @@
 class Qgh < Formula
   desc "Local-first GitHub Issues retrieval CLI"
   homepage "https://github.com/juicyjusung/qgh"
-  version "0.1.0"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-aarch64-apple-darwin.tar.xz"
-      sha256 "fdeb1168a1335a9acac322d115c99ec3724ff61b8a641ba294f695dd3a9a2d29"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-x86_64-apple-darwin.tar.xz"
-      sha256 "3a1b90b6c60087a3fb8ace6803916e65742d45791a103c81dfd2a3fb81bfd987"
-    end
+  version "0.1.1"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/juicyjusung/qgh/releases/download/v0.1.1/qgh-aarch64-apple-darwin.tar.xz"
+    sha256 "74ea41ad43196464564eda3a4bfc19c0fe48cdb358de648e0deb164f13a4d819"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "48668496f6e4144e6de23db304ddfd47b19ae94d8b5de8c03c2753ba85901a5d"
+    url "https://github.com/juicyjusung/qgh/releases/download/v0.1.1/qgh-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "a41a944efd9c37ce5b125391a19d2cbf995c79bc03ff193cfc80ff2dcecb10b3"
   end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":     {},
-    "x86_64-apple-darwin":      {},
     "x86_64-unknown-linux-gnu": {},
   }.freeze
 
@@ -40,7 +33,6 @@ class Qgh < Formula
 
   def install
     bin.install "qgh" if OS.mac? && Hardware::CPU.arm?
-    bin.install "qgh" if OS.mac? && Hardware::CPU.intel?
     bin.install "qgh" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
