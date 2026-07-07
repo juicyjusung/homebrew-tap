@@ -5,16 +5,16 @@ class Qgh < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-aarch64-apple-darwin.tar.xz"
-      sha256 "5630582ba2353f485de2bc221baa410c4f7e044e790ce46f69c30de55147f8ec"
+      sha256 "1d1aa97979b3fd0c613c8f25bc76af175d17993caf7db24dad74a37b452a1c8e"
     end
     if Hardware::CPU.intel?
       url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-x86_64-apple-darwin.tar.xz"
-      sha256 "b0349dd617e7524e6e4adf378722d66287610a69cbd7dab9ed2249d83c7ce30d"
+      sha256 "ebb3ca5eb3b384230befb8a5532d67399ceb12f0b3354438ba91a0aa4d9844ef"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/juicyjusung/qgh/releases/download/v0.1.0/qgh-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "006ac5f7d7982cabe96d96fbd387f148c72260b7334fa3bbfc273e740a3a67bb"
+    sha256 "e4a099bf3ea15a86f9eb77d231646b0008a3218750831d78b84f120681fddfa8"
   end
 
   BINARY_ALIASES = {
