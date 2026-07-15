@@ -1,14 +1,14 @@
 class Qgh < Formula
   desc "Local-first GitHub Issues retrieval CLI"
   homepage "https://github.com/juicyjusung/qgh"
-  version "0.3.1"
+  version "0.4.0"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/juicyjusung/qgh/releases/download/v0.3.1/qgh-aarch64-apple-darwin.tar.xz"
-    sha256 "a07b3860935b606f1a5f3ae88f93755e271a9bdefafde7eacfdc6b61f1144fec"
+    url "https://github.com/juicyjusung/qgh/releases/download/v0.4.0/qgh-aarch64-apple-darwin.tar.xz"
+    sha256 "dc8c8f66a9599a969082451884632ec9c8abf000e461656a07eaff6f7a13c6a3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/juicyjusung/qgh/releases/download/v0.3.1/qgh-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "72b17fd9840c295e18ea3777e568e48711b8d484ae7ec01212e3c341b216fa6d"
+    url "https://github.com/juicyjusung/qgh/releases/download/v0.4.0/qgh-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "b145f138f80d3b2773d542251987787bf5960687394ec08f51df7824e993a931"
   end
 
   BINARY_ALIASES = {
